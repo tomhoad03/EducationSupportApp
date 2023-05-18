@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Education Support</string>
+    <string name="home">Home</string>
+    <string name="my_courses">My Courses</string>
+    <string name="explore_courses">Explore Courses</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="new_course">New Course</string>
+    <string name="course_name">Course Name</string>
+    <string name="course_description">Course Description</string>
+    <string name="add_course">Add Course</string>
+    <string name="new_activity">New Activity</string>
+    <string name="new_learner">New Learner</string>
+    <string name="activity_name">Activity Name</string>
+    <string name="activity_description">Activity Description</string>
+    <string name="add_activity">Add Activity</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="cancel">Cancel</string>
+    <string name="button_educator">Educator</string>
+    <string name="button_learner">Learner</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="learner_email">Learner Email</string>
+    <string name="add_learner">Add Learner</string>
+    <string name="join_course_title">Join Course</string>
+    <string name="join_course_text">Do you want to join this course?</string>
+    <string name="confirm">Confirm</string>
+    <string name="gt"><![CDATA[>]]></string>
+    <string name="lt"><![CDATA[<]]></string>
+</resources>

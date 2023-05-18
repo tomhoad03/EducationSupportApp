@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.educationsupport.MainActivity">
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="1"
+        android:title="Profile"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sign_out"
+        android:orderInCategory="10"
+        android:title="Sign Out"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/search_bar"
+        android:icon="@drawable/baseline_search_24"
+        android:orderInCategory="300"
+        android:title="Search"
+        android:visible="false"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

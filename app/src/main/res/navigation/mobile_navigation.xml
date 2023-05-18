@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_loginFragment">
+    <fragment
+        android:id="@+id/navigation_loginFragment"
+        android:name="com.example.educationsupport.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_navigation_loginFragment_to_navigation_mycoursesFragment"
+            app:destination="@id/navigation_mycoursesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_mycoursesFragment"
+        android:name="com.example.educationsupport.ui.courses.MyCoursesFragment"
+        android:label="My Courses"
+        tools:layout="@layout/fragment_mycourses">
+        <action
+            android:id="@+id/action_navigation_mycoursesFragment_to_navigation_courseFragment"
+            app:destination="@id/navigation_courseFragment" />
+        <action
+            android:id="@+id/action_navigation_mycoursesFragment_to_navigation_loginFragment"
+            app:destination="@id/navigation_loginFragment" />
+        <action
+            android:id="@+id/action_navigation_mycoursesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_courseFragment"
+        android:name="com.example.educationsupport.ui.courses.CourseFragment"
+        android:label="Course"
+        tools:layout="@layout/fragment_course">
+        <action
+            android:id="@+id/action_navigation_courseFragment_to_navigation_activityFragment"
+            app:destination="@id/navigation_activityFragment"
+            app:popUpTo="@id/navigation_courseFragment" />
+        <action
+            android:id="@+id/action_navigation_courseFragment_to_courseLearnersFragment"
+            app:destination="@id/courseLearnersFragment" />
+        <action
+            android:id="@+id/action_navigation_courseFragment_to_navigation_manageQuestionsFragment"
+            app:destination="@id/navigation_manageQuestionsFragment"
+            app:popUpTo="@id/navigation_courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_manageQuestionsFragment"
+        android:name="com.example.educationsupport.ui.learneractivities.ManageQuestionsFragment"
+        android:label="Manage Questions"
+        tools:layout="@layout/fragment_manage_questions">
+        <action
+            android:id="@+id/action_navigation_manageQuestionsFragment_to_navigation_editQuestionFragment"
+            app:destination="@id/navigation_editQuestionFragment" />
+        <action
+            android:id="@+id/action_navigation_manageQuestionsFragment_to_activityEducatorResultsFragment"
+            app:destination="@id/activityEducatorResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_activityFragment"
+        android:name="com.example.educationsupport.ui.learneractivities.ActivityFragment"
+        android:label="Activity"
+        tools:layout="@layout/fragment_activity">
+        <action
+            android:id="@+id/action_navigation_activityFragment_to_navigation_questionView"
+            app:destination="@+id/navigation_questionView" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_questionView"
+        android:name="com.example.educationsupport.ui.learneractivities.QuestionViewFragment"
+        android:label="Questions"
+        tools:layout="@layout/fragment_activity">
+        <!-- This answer on stackoverflow helped figure out how to go back to courses after activity is completed
+        https://stackoverflow.com/a/71875794 [Accessed: 6 May] -->
+        <action
+            android:id="@+id/action_navigation_questionView_to_navigation_activityResultsFragment"
+            app:destination="@id/navigation_activityResultsFragment"
+            app:popUpTo="@id/navigation_courseFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exploreFragment"
+        android:name="com.example.educationsupport.ui.explore.ExploreFragment"
+        android:label="Explore Courses"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_navigation_exploreFragment_to_navigation_mycoursesFragment"
+            app:destination="@id/navigation_mycoursesFragment" />
+        <action
+            android:id="@+id/action_navigation_exploreFragment_to_navigation_loginFragment"
+            app:destination="@id/navigation_loginFragment" />
+        <action
+            android:id="@+id/action_navigation_exploreFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseLearnersFragment"
+        android:name="com.example.educationsupport.ui.courses.CourseLearnersFragment"
+        android:label="Course Learners"
+        tools:layout="@layout/fragment_course_learners" />
+    <fragment
+        android:id="@+id/navigation_activityResultsFragment"
+        android:name="com.example.educationsupport.ui.learneractivities.ActivityResultsFragment"
+        android:label="Activity Results"
+        tools:layout="@layout/fragment_activity_results" />
+
+    <fragment
+        android:id="@+id/navigation_editQuestionFragment"
+        android:name="com.example.educationsupport.ui.learneractivities.EditQuestionFragment"
+        android:label="Edit Question"
+        tools:layout="@layout/fragment_edit_question" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.educationsupport.ui.login.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/activityEducatorResultsFragment"
+        android:name="com.example.educationsupport.ui.learneractivities.ActivityEducatorResultsFragment"
+        android:label="Learner Results"
+        tools:layout="@layout/fragment_activity_educator_results" />
+</navigation>
